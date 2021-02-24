@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:weightSum="100">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="20"
+        android:weightSum="100">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="80">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="20dp"
+                android:weightSum="100">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="SCORE:"
+                    tools:ignore="MissingConstraints"
+                    android:paddingLeft="20dp"
+                    android:textSize="25dp"
+                    android:layout_weight="40"
+                    />
+
+                <TextView
+                    android:id="@+id/score"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="1000"
+                    tools:ignore="MissingConstraints"
+                    android:textSize="25dp"
+                    android:layout_weight="60"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="20dp"
+                android:weightSum="100">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="BEST:"
+                    tools:ignore="MissingConstraints"
+                    android:paddingLeft="20dp"
+                    android:textSize="25dp"
+                    android:layout_weight="40"
+                    />
+
+                <TextView
+                    android:id="@+id/record"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="1000"
+                    android:textAlignment="textStart"
+                    tools:ignore="MissingConstraints"
+                    android:textSize="25dp"
+                    android:layout_weight="60"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <ImageButton
+            android:id="@+id/restart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:background="@drawable/restart"
+            android:adjustViewBounds="true"
+            android:src="@drawable/restart"/>
+    </LinearLayout>
+
+    <com.oh_72.bicoloured2048.DrawView
+        android:id="@+id/surface"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="70" />
+
+
+
+
+</LinearLayout>
